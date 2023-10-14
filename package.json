@@ -4,6 +4,7 @@
   "description": "Hikes, Fish, and more",
   "main": "server.js",
   "scripts": {
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "start": "nodemon server.js",
@@ -11,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nina Saunders",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
@@ -31,6 +32,10 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^3.0.3",
-    "swagger-autogen": "^2.23.6"
+    "swagger-autogen": "^2.23.6",
+    "webpack": "^5.89.0"
+  },
+  "engines": {
+    "node": "18.17.1"
   }
 }
