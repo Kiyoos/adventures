@@ -1,0 +1,23 @@
+// Local Library RESTs
+
+### Get api-docs
+GET http://localhost:8080/api-docs
+
+### Get All Hikes
+GET  http://localhost:8080/hikes
+
+### Create new Hike
+POST http://localhost:8080/hikes HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Harrison Lake",
+  "location": "Kaniksu National Forest",
+  "type": "Out & Back",
+  "miles": 4.6,
+  "elevationStart": 4674,
+  "elevationEnd": 6111,
+  "elevationGain": 1437  
+}
+
+// Render Library RESTs
