@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Adventures API",
+    "title": "Adventures API",
+    "description": "Hikes, Fish, and more",
     "version": "1.0.0"
   },
   "host": "kiyoos-adventures.onrender.com",
@@ -184,7 +184,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "hikeName": {
                   "example": "any"
                 },
                 "location": {
@@ -257,7 +257,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "hikeName": {
                   "example": "any"
                 },
                 "location": {

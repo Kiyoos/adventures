@@ -11,7 +11,7 @@ POST http://localhost:8080/hikes HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Harrison Lake",
+  "hikeName": "Harrison Lake",
   "location": "Kaniksu National Forest",
   "type": "Out & Back",
   "miles": 4.6,

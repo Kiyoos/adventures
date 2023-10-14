@@ -34,7 +34,7 @@ const getHike = async (req, res) => {
 const createHike = async (req, res) => {
   try {
     const hike = {
-      name: req.body.name,
+      hikeName: req.body.hikeName,
       location: req.body.location,
       type: req.body.type,
       miles: req.body.miles,
@@ -59,7 +59,7 @@ const updateHike = async (req, res) => {
     // req.params.id will grab the requested id for the json file
     const userId = new ObjectId(req.params.id);
     const hike = {
-      name: req.body.name,
+      hikeName: req.body.hikeName,
       location: req.body.location,
       type: req.body.type,
       miles: req.body.miles,
