@@ -2,6 +2,7 @@
 
 ### Get api-docs
 GET http://localhost:8080/api-docs
+Content-Type: text/html
 
 ### Get All Hikes
 GET  http://localhost:8080/hikes
@@ -11,7 +12,7 @@ POST http://localhost:8080/hikes HTTP/1.1
 content-type: application/json
 
 {
-  "hikeName": "Harrison Lake",
+  "hikeName": "Harrison Peak",
   "location": "Kaniksu National Forest",
   "type": "Out & Back",
   "miles": 4.6,
