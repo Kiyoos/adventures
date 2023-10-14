@@ -5,8 +5,8 @@ const doc = {
     title: 'My API',
     description: 'Adventures API'
   },
-  host: 'localhost:8080', // this will need to change
-  schemes: ['http']
+  host: 'kiyoos-adventures.onrender.com', // this will need to change
+  schemes: ['https']
 };
 
 const outputFile = './swagger.json';
