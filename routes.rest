@@ -1,11 +1,13 @@
-// Local Library RESTs
+// LOCALHOST Adventures RESTs
 
 ### Get api-docs
 GET http://localhost:8080/api-docs
-Content-Type: text/html
 
 ### Get All Hikes
 GET  http://localhost:8080/hikes
+
+### Get Single Hike by ID -- NOTE: ID must be updated
+GET  http://localhost:8080/hikes/6529f7c1b9c8f31137139389
 
 ### Create new Hike
 POST http://localhost:8080/hikes HTTP/1.1
@@ -18,7 +20,64 @@ content-type: application/json
   "miles": 4.6,
   "elevationStart": 4674,
   "elevationEnd": 6111,
-  "elevationGain": 1437  
+  "elevationGain": 1437
 }
 
-// Render Library RESTs
+### Update Hike by ID -- NOTE: ID must be updated
+PUT http://localhost:8080/hikes/652b31b4f2b97e3a5fd74501 HTTP/1.1
+content-type: application/json
+
+{
+  "hikeName": "Harrison Peak",
+  "location": "Kaniksu National Forest",
+  "type": "Out & Back",
+  "miles": 5,
+  "elevationStart": 4674,
+  "elevationEnd": 7292,
+  "elevationGain": 2618
+}
+
+### Delete Hike by ID -- NOTE: ID must be updated
+DELETE  http://localhost:8080/hikes/652b31b4f2b97e3a5fd74501
+
+// RENDER Adventures RESTs
+
+### Get api-docs
+GET https://kiyoos-adventures.onrender.com/api-docs
+
+### Get All Hikes
+GET  https://kiyoos-adventures.onrender.com/hikes
+
+### Get Single Hike by ID -- NOTE: ID must be updated
+GET  https://kiyoos-adventures.onrender.com/hikes/6529f7c1b9c8f31137139389
+
+### Create new Hike
+POST https://kiyoos-adventures.onrender.com/hikes HTTP/1.1
+content-type: application/json
+
+{
+  "hikeName": "Harrison Peak",
+  "location": "Kaniksu National Forest",
+  "type": "Out & Back",
+  "miles": 4.6,
+  "elevationStart": 4674,
+  "elevationEnd": 6111,
+  "elevationGain": 1437
+}
+
+### Update Hike by ID -- NOTE: ID must be updated
+PUT https://kiyoos-adventures.onrender.com/hikes/652b31b4f2b97e3a5fd74501 HTTP/1.1
+content-type: application/json
+
+{
+  "hikeName": "Harrison Peak",
+  "location": "Kaniksu National Forest",
+  "type": "Out & Back",
+  "miles": 5,
+  "elevationStart": 4674,
+  "elevationEnd": 7292,
+  "elevationGain": 2618
+}
+
+### Delete Hike by ID -- NOTE: ID must be updated
+DELETE  https://kiyoos-adventures.onrender.com/hikes/652b31b4f2b97e3a5fd74501
