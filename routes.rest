@@ -3,6 +3,41 @@
 ### LOCAL Get api-docs
 GET http://localhost:8080/api-docs
 
+// ***** FISH LINKS ******
+
+### Get All Fish
+GET  http://localhost:8080/fish
+
+### Get Single Fish by ID -- NOTE: ID must be updated
+GET  http://localhost:8080/fish/65341443b71a4c3b78b9e462
+
+### Create new Fish
+POST http://localhost:8080/fish HTTP/1.1
+content-type: application/json
+
+{
+  "type": "Smallmouth Bass",
+  "length": 19,
+  "weight": 61,
+  "date": "10/20/2021",
+  "location": "Coeur d'Alene Lake"
+}
+
+### Update Fish by ID -- NOTE: ID must be updated
+PUT http://localhost:8080/fish/65329383b7549601462ea266 HTTP/1.1
+content-type: application/json
+
+{
+  "type": "Smallmouth Bass",
+  "length": 14.5,
+  "weight": 20,
+  "date": "07/15/2021",
+  "location": "Coeur d'Alene Lake"
+}
+
+### Delete Fish by ID -- NOTE: ID must be updated
+DELETE  http://localhost:8080/fish/65329383b7549601462ea26ac
+
 // ***** HIKE LINKS *****
 
 ### Get All Hikes
@@ -42,16 +77,21 @@ content-type: application/json
 ### Delete Hike by ID -- NOTE: ID must be updated
 DELETE  http://localhost:8080/hikes/653422e2a86d42c7797ac32e
 
+// RENDER Adventures RESTs
+
+### RENDER Get api-docs
+GET https://kiyoos-adventures.onrender.com/api-docs
+
 // ***** FISH LINKS ******
 
 ### Get All Fish
-GET  http://localhost:8080/fish
+GET  https://kiyoos-adventures.onrender.com/fish
 
 ### Get Single Fish by ID -- NOTE: ID must be updated
-GET  http://localhost:8080/fish/65341443b71a4c3b78b9e462
+GET  https://kiyoos-adventures.onrender.com/fish/65341443b71a4c3b78b9e462
 
 ### Create new Fish
-POST http://localhost:8080/fish HTTP/1.1
+POST https://kiyoos-adventures.onrender.com/fish HTTP/1.1
 content-type: application/json
 
 {
@@ -63,7 +103,7 @@ content-type: application/json
 }
 
 ### Update Fish by ID -- NOTE: ID must be updated
-PUT http://localhost:8080/fish/65329383b7549601462ea266 HTTP/1.1
+PUT https://kiyoos-adventures.onrender.com/fish/65329383b7549601462ea266 HTTP/1.1
 content-type: application/json
 
 {
@@ -75,12 +115,7 @@ content-type: application/json
 }
 
 ### Delete Fish by ID -- NOTE: ID must be updated
-DELETE  http://localhost:8080/fish/65329383b7549601462ea26ac
-
-// RENDER Adventures RESTs
-
-### RENDER Get api-docs
-GET https://kiyoos-adventures.onrender.com/api-docs
+DELETE  https://kiyoos-adventures.onrender.com/fish/65329383b7549601462ea26ac
 
 // ***** HIKE LINKS *****
 
