@@ -23,7 +23,11 @@ const getSingleFish = async (req, res) => {
     const result = await mongodb.getDb().db().collection('fish').find({ _id: userId });
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists[0]);
+      if (lists == '') {
+        res.status(400).json({ message: 'No fish information from that ID.' });
+      } else {
+        res.status(200).json(lists[0]);
+      }
     });
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -83,10 +87,12 @@ const deleteFish = async (req, res) => {
     const userId = new ObjectId(req.params.id);
     // .deleteOne({_id: userId}) deletes the user id that was entered above
     const result = await mongodb.getDb().db().collection('fish').deleteOne({ _id: userId });
-    if (result.acknowledged) {
+    if (result.deletedCount > 0) {
       res.status(200).json(result);
     } else {
-      res.status(500).json(result.error || 'Some error occurred while deleting the fish.');
+      res
+        .status(500)
+        .json(result.error || { message: 'Some error occurred while deleting the fish.' });
     }
   } catch (err) {
     res.status(500).json({ message: err.message });

@@ -22,7 +22,8 @@
     "react": "^18.2.0",
     "swagger-autogen": "^2.23.6",
     "swagger-ui-dist": "^5.9.0",
-    "swagger-ui-express": "^5.0.0"
+    "swagger-ui-express": "^5.0.0",
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {
     "eslint": "^8.51.0",

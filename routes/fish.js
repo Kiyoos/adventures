@@ -1,21 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const fishController = require('../controllers/fish');
+const validation = require('../middleware/validate');
 
 // get all contacts from db
 router.get('/', fishController.getAllFish);
 
 // get single contact from db
-router.get('/:id', fishController.getSingleFish);
+router.get('/:id', validation.checkId, fishController.getSingleFish);
 
 // create new contact
-router.post('/', fishController.createFish);
+router.post('/', validation.saveFish, fishController.createFish);
 
 // update new contact
-router.put('/:id', fishController.updateFish);
+router.put('/:id', validation.checkId, validation.saveFish, fishController.updateFish);
 
 // delete new contact
-router.delete('/:id', fishController.deleteFish);
+router.delete('/:id', validation.checkId, fishController.deleteFish);
 
 // exports
 module.exports = router;

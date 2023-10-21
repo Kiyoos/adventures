@@ -1,13 +1,15 @@
 // LOCALHOST Adventures RESTs
 
-### Get api-docs
+### LOCAL Get api-docs
 GET http://localhost:8080/api-docs
+
+// ***** HIKE LINKS *****
 
 ### Get All Hikes
 GET  http://localhost:8080/hikes
 
 ### Get Single Hike by ID -- NOTE: ID must be updated
-GET  http://localhost:8080/hikes/6529f7c1b9c8f31137139389
+GET  http://localhost:8080/hikes/652b360485dfe67a099d1b15
 
 ### Create new Hike
 POST http://localhost:8080/hikes HTTP/1.1
@@ -24,7 +26,7 @@ content-type: application/json
 }
 
 ### Update Hike by ID -- NOTE: ID must be updated
-PUT http://localhost:8080/hikes/652b31b4f2b97e3a5fd74501 HTTP/1.1
+PUT http://localhost:8080/hikes/653422e2a86d42c7797ac32e HTTP/1.1
 content-type: application/json
 
 {
@@ -38,12 +40,49 @@ content-type: application/json
 }
 
 ### Delete Hike by ID -- NOTE: ID must be updated
-DELETE  http://localhost:8080/hikes/652b31b4f2b97e3a5fd74501
+DELETE  http://localhost:8080/hikes/653422e2a86d42c7797ac32e
+
+// ***** FISH LINKS ******
+
+### Get All Fish
+GET  http://localhost:8080/fish
+
+### Get Single Fish by ID -- NOTE: ID must be updated
+GET  http://localhost:8080/fish/65341443b71a4c3b78b9e462
+
+### Create new Fish
+POST http://localhost:8080/fish HTTP/1.1
+content-type: application/json
+
+{
+  "type": "Smallmouth Bass",
+  "length": 19,
+  "weight": 61,
+  "date": "10/20/2021",
+  "location": "Coeur d'Alene Lake"
+}
+
+### Update Fish by ID -- NOTE: ID must be updated
+PUT http://localhost:8080/fish/65329383b7549601462ea266 HTTP/1.1
+content-type: application/json
+
+{
+  "type": "Smallmouth Bass",
+  "length": 14.5,
+  "weight": 20,
+  "date": "07/15/2021",
+  "location": "Coeur d'Alene Lake"
+}
+
+### Delete Fish by ID -- NOTE: ID must be updated
+DELETE  http://localhost:8080/fish/65329383b7549601462ea26ac
 
 // RENDER Adventures RESTs
 
-### Get api-docs
+### RENDER Get api-docs
 GET https://kiyoos-adventures.onrender.com/api-docs
+
+// ***** HIKE LINKS *****
 
 ### Get All Hikes
 GET  https://kiyoos-adventures.onrender.com/hikes
