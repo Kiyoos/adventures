@@ -49,7 +49,7 @@ const saveFish = (req, res, next) => {
 const checkId = (req, res, next) => {
   // checks to see if the id entered is a valid Mongodb ID
   if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json({ message: 'Must use a valid id.' });
+    res.status(400).json({ message: 'Must use a valid ID.' });
     process.exit;
   } else {
     next();
