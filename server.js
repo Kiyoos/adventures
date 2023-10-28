@@ -14,6 +14,7 @@ app
     next();
   })
   .use('/', require('./routes'))
+
   .get('/oauth-callback', (req, res) => {
     axios({
       method: 'POST',

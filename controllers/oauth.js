@@ -10,17 +10,16 @@ const oauthConnect = async (req, res) => {
   }
 };
 
-/*
-const oauthCallback = async (req, res) => {
-  axios({
-    method: 'POST',
-    url: `https://github.com/login/oauth/access_token?client_id=${process.env.githubClientId}&client_secret=${process.env.githubSecret}&code=${req.query.code}`,
-    headers: { Accept: 'application/json' }
-  }).then((response) => {
-    res.redirect(`http://localhost:8080?access_token=${response.data.access_token}`);
-  });
-};
-*/
+// const oauthCallback = async (req, res) => {
+//   axios({
+//     method: 'POST',
+//     url: `https://github.com/login/oauth/access_token?client_id=${process.env.githubClientId}&client_secret=${process.env.githubSecret}&code=${req.query.code}`,
+//     headers: { Accept: 'application/json' }
+//   }).then((response) => {
+//     res.redirect(`http://localhost:8080?access_token=${response.data.access_token}`);
+//   });
+// };
+
 /*
 const oauthCallback = async (req, res) => {
   try {

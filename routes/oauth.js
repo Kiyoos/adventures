@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const oauthController = require('../controllers/oauth');
 // const validation = require('../middleware/validate');
-const axios = require('axios');
+// const axios = require('axios');
 
 router.get('/', oauthController.oauthConnect);
-// router.get('/oauth-callback?code=', oauthController.oauthCallback);
+// router.get('/oauth-callback', oauthController.oauthCallback);
 
 // router.get('/success', oauthController.oauthSuccess);
 /*
