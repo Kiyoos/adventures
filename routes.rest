@@ -6,6 +6,9 @@ GET http://localhost:8080/api-docs
 ### Oauth
 GET http://localhost:8080/oauth
 
+###
+GET https://kiyoos-adventures.onrender.com/oauth
+
 // ***** FISH LINKS ******
 
 ### Get All Fish
