@@ -21,7 +21,9 @@ app
       url: `https://github.com/login/oauth/access_token?client_id=${process.env.githubClientId}&client_secret=${process.env.githubSecret}&code=${req.query.code}`,
       headers: { Accept: 'application/json' }
     }).then((response) => {
-      res.redirect(`http://localhost:8080?access_token=${response.data.access_token}`);
+      res.redirect(
+        `https://kiyoos-adventures.onrender.com?access_token=${response.data.access_token}`
+      );
     });
   });
 
