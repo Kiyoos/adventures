@@ -13,13 +13,34 @@ const oauthCallback = async (req, res) => {
     method: 'POST',
     url: `https://github.com/login/oauth/access_token?client_id=${process.env.GIT_CLIENT_ID}&client_secret=${process.env.GIT_SECRET}&code=${req.query.code}`,
     headers: { Accept: 'application/json' }
-  }).then((response) => {
-    res.redirect(`http://localhost:8080?access_token=${response.data.access_token}`);
-  });
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      res.json(data);
+    });
+};
+
+const oauthGetUser = async (req, res) => {
+  req.get('Authorization');
+  await fetch('https://api.github.com/user', {
+    method: 'GET',
+    headers: {
+      Authorization: req.get('Authorization')
+    }
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      res.json(data);
+    });
 };
 
 module.exports = {
   oauthConnect,
-  oauthCallback
-  // oauthSuccess
+  oauthCallback,
+  oauthGetUser
 };

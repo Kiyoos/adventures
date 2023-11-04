@@ -5,30 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kiyoos Adventures</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <script src="./script.js" defer></script> -->
   </head>
 
   <body>
     <h1>Kiyoos Adventures</h1>
-    <div class="container">
-      <div class="content">
-        <div class="about">
-          <h1>
-            <div class="hikes" id="hikeName"></div>
-          </h1>
-          <div class="flex-container">
-            <div class="flex-child">
-              <p id="hikeLocation"></p>
-              <p id="hikeType"></p>
-              <p id="hikeMiles"></p>
-              <p id="elevationStart"></p>
-              <p id="elevationEnd"></p>
-              <p id="elevationGain"></p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>
+      <input type="button" onclick="location.href='http://localhost:8080/login'" value="Login"/>
+      <input type="button" onclick="location.href='http://localhost:8080/logout'" value="Logout"/>
+      <input type="button" onclick="location.href='http://localhost:8080/oauth'" value="Login with GitHub"/>
+    </div>
+    <div>
+      <input type="button" onclick="location.href='http://localhost:8080/swagger/api-docs'" value="Go to API Docs"/>
+      <input type="button" onclick="location.href='http://localhost:8080/hikes'" value="Go to Hikes"/>
+      <input type="button" onclick="location.href='http://localhost:8080/fish'" value="Go to Fish"/>
     </div>
   </body>
 </html>

@@ -4,6 +4,6 @@ const oauthController = require('../controllers/oauth');
 // const validation = require('../middleware/validate');
 
 router.get('/', oauthController.oauthConnect);
-router.get('/oauth-callback', oauthController.oauthCallback);
+router.get('/callback', oauthController.oauthCallback);
 
 module.exports = router;
