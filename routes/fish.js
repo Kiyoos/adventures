@@ -2,21 +2,28 @@ const express = require('express');
 const router = express.Router();
 const fishController = require('../controllers/fish');
 const validation = require('../middleware/validate');
+const { requiresAuth } = require('express-openid-connect');
 
-// get all contacts from db
-router.get('/', fishController.getAllFish);
+// get all fishs from db
+router.get('/', requiresAuth(), fishController.getAllFish);
 
-// get single contact from db
-router.get('/:id', validation.checkId, fishController.getSingleFish);
+// get single fish from db
+router.get('/:id', requiresAuth(), validation.checkId, fishController.getSingleFish);
 
-// create new contact
-router.post('/', validation.saveFish, fishController.createFish);
+// create new fish
+router.post('/', requiresAuth(), validation.saveFish, fishController.createFish);
 
-// update new contact
-router.put('/:id', validation.checkId, validation.saveFish, fishController.updateFish);
+// update new fish
+router.put(
+  '/:id',
+  requiresAuth(),
+  validation.checkId,
+  validation.saveFish,
+  fishController.updateFish
+);
 
-// delete new contact
-router.delete('/:id', validation.checkId, fishController.deleteFish);
+// delete new fish
+router.delete('/:id', requiresAuth(), validation.checkId, fishController.deleteFish);
 
 // exports
 module.exports = router;

@@ -1,5 +1,6 @@
 const validate = require('../helpers/validate');
 const ObjectId = require('mongodb').ObjectId;
+// const { requiresAuth } = require('express-openid-connect');
 
 const saveHike = (req, res, next) => {
   const validationRule = {
@@ -55,6 +56,10 @@ const checkId = (req, res, next) => {
     next();
   }
 };
+
+// app.get('/profile', requiresAuth(), (req, res) => {
+//   res.send(JSON.stringify(req.oidc.user));
+// });
 
 module.exports = {
   saveHike,

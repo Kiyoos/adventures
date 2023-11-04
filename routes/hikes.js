@@ -2,21 +2,28 @@ const express = require('express');
 const router = express.Router();
 const hikesController = require('../controllers/hikes');
 const validation = require('../middleware/validate');
+const { requiresAuth } = require('express-openid-connect');
 
-// get all contacts from db
-router.get('/', hikesController.getHikes);
+// get all hikes from db
+router.get('/', requiresAuth(), hikesController.getHikes);
 
-// get single contact from db
-router.get('/:id', validation.checkId, hikesController.getHike);
+// get single hike from db
+router.get('/:id', requiresAuth(), validation.checkId, hikesController.getHike);
 
-// create new contact
-router.post('/', validation.saveHike, hikesController.createHike);
+// create new hike
+router.post('/', requiresAuth(), validation.saveHike, hikesController.createHike);
 
-// update new contact
-router.put('/:id', validation.checkId, validation.saveHike, hikesController.updateHike);
+// update new hike
+router.put(
+  '/:id',
+  requiresAuth(),
+  validation.checkId,
+  validation.saveHike,
+  hikesController.updateHike
+);
 
-// delete new contact
-router.delete('/:id', validation.checkId, hikesController.deleteHike);
+// delete new hike
+router.delete('/:id', requiresAuth(), validation.checkId, hikesController.deleteHike);
 
 // exports
 module.exports = router;

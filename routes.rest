@@ -1,7 +1,7 @@
 // LOCALHOST Adventures RESTs
 
 ### LOCAL Get api-docs
-GET http://localhost:8080/api-docs
+GET http://localhost:8080/swagger/api-docs
 
 ### Oauth
 GET http://localhost:8080/oauth
