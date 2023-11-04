@@ -3,11 +3,8 @@
 ### LOCAL Get api-docs
 GET http://localhost:8080/swagger/api-docs
 
-### Oauth
-GET http://localhost:8080/oauth
-
-###
-GET https://kiyoos-adventures.onrender.com/oauth
+### Login
+GET http://localhost:8080/login
 
 // ***** FISH LINKS ******
 
@@ -86,7 +83,10 @@ DELETE  http://localhost:8080/hikes/653422e2a86d42c7797ac32e
 // RENDER Adventures RESTs
 
 ### RENDER Get api-docs
-GET https://kiyoos-adventures.onrender.com/api-docs
+GET https://kiyoos-adventures.onrender.com/swagger/api-docs
+
+### Login
+GET https://kiyoos-adventures.onrender.com/login
 
 // ***** FISH LINKS ******
 

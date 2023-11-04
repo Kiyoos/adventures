@@ -7,12 +7,39 @@
   },
   "host": "kiyoos-adventures.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/auth0/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/fish/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -66,7 +93,9 @@
     "/fish/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -162,7 +191,9 @@
     "/hikes/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -222,7 +253,9 @@
     "/hikes/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -317,6 +350,16 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/profile/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
