@@ -17,7 +17,7 @@ router.use('/auth0', auth0);
 router.use('/fish', fish);
 router.use('/hikes', hikes);
 router.use('/oauth', oauth);
-router.use('/oauth-callback', oauth);
+router.use('/callback', oauth);
 router.use('/profile', profile);
 router.use('/swagger', swagger);
 
